@@ -1,0 +1,39 @@
+﻿body {
+}
+header {
+    border: 1px solid red;
+    padding: 10px 10px 10px 10px;
+    height: 100px;
+    width:auto;
+    background-color: aqua;
+   color: blue;
+    align-content: center;
+    font-family: Verdana;
+    font-size: large;
+   
+}
+
+footer {
+    border: 1px solid red;
+   text-align:center; 
+    position: absolute;
+    bottom: 0;
+    width:100%;
+    background-color:aqua;
+    color: blue;
+    position:fixed;
+}
+
+#a{
+    width:50%;
+    float:left;
+}
+#b {
+    width: 50%;
+    float: right;
+}
+#signin{
+    align-content:center;
+    margin-left:45%;
+    width: 390px;
+}

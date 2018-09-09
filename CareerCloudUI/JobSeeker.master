@@ -1,0 +1,26 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="JobSeeker.master.cs" Inherits="CareerCloudUI.JobSeeker" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="MasterContentPlaceHolder" runat="server">
+    
+            <asp:Menu ID="EmployeeMenu" runat="server"  Orientation="Horizontal">
+                <Items>
+                    <asp:MenuItem Text="Profile" Value="Profile" NavigateUrl="~/ApplicantProfile.aspx">
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="AppliedJobs" Value="Profile" NavigateUrl="~/AppliedJobs.aspx">
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="Resume" Value="Resume" NavigateUrl="~/Resume.aspx">
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="FindJobs" Value="View Resume" NavigateUrl="~/FindJobs.aspx">
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="Log Out" Value="Log Out" NavigateUrl="~/Main.aspx">
+ </asp:MenuItem>
+                </Items>
+            </asp:Menu>
+       
+      
+            <asp:ContentPlaceHolder ID="EmployeeSectionContent" runat="server">
+                <%--<h1>Section that changes on a page by page basis</h1>--%>
+            </asp:ContentPlaceHolder>
+        
+</asp:Content>

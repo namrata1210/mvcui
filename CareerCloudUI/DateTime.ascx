@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="DateTime.ascx.cs" Inherits="CareerCloudUI.DateTime" %>
+<asp:Label ID="Label1" runat="server" Text="Label" OnDataBinding="Label1_DataBinding"></asp:Label>
