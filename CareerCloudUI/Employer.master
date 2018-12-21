@@ -9,20 +9,19 @@
            
     <div style="width:100%">
         <div id="a">
-
-            <asp:Menu ID="EmployeeMenu" runat="server" Orientation="Horizontal">
+            <asp:Menu ID="EmployeeMenu"  runat="server" Orientation="Horizontal" CssClass="menu">
                 <Items>
-                    <asp:MenuItem Text="Company Profile" Value="CompanyProfile" NavigateUrl="~/CompanyProfile.aspx">
+                  <asp:MenuItem Text="CompanyProfile" Value="CompanyProfile" NavigateUrl="~/CompanyProfile.aspx" >
                     </asp:MenuItem>          
-                    <asp:MenuItem Text="Post Job" Value="PostJob" NavigateUrl="~/PostJob.aspx">
+                   <asp:MenuItem Text="PostJob" Value="PostJob" NavigateUrl="~/PostJob.aspx">
                     </asp:MenuItem>
-                    <asp:MenuItem Text="View Posted Job" Value="ViewPostedJob" NavigateUrl="~/ViewPostesJobs.aspx">
+                  <asp:MenuItem Text="ViewPostedJob" Value="ViewPostedJob" NavigateUrl="~/ViewPostesJobs.aspx">
                     </asp:MenuItem>
-                    <asp:MenuItem Text="Log Out" Value="Log Out" NavigateUrl="~/Main.aspx">
- </asp:MenuItem>
+                   <asp:MenuItem Text="LogOut" Value="Log Out" NavigateUrl="~/Home.aspx">
+                   </asp:MenuItem>
                 </Items>
             </asp:Menu>
-            </div>
+                </div>
         
        </div>
         

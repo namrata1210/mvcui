@@ -13,9 +13,10 @@
                 <asp:BoundField DataField="Id" HeaderText="Id" SortExpression="Id" ReadOnly="True" />
             </Columns>
         </asp:GridView>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:JOB_PORTAL_DBConnectionString %>" SelectCommand="SELECT [Job], [Job_Name], [Job_Descriptions], [Id] FROM [Company_Jobs_Descriptions] WHERE ([Id] = @Id)">
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:JOB_PORTAL_DBConnectionString %>" SelectCommand="SELECT [Job], [Job_Name], [Job_Descriptions], [Id] FROM [Company_Jobs_Descriptions] WHERE (([Id] = @Id) AND ([Id] = @Id2))">
             <SelectParameters>
                 <asp:ControlParameter ControlID="Label1" Name="Id" PropertyName="Text" Type="Object" />
+                <asp:ControlParameter ControlID="Label1" Name="Id2" PropertyName="Text" Type="Object" />
             </SelectParameters>
         </asp:SqlDataSource>
         <br />

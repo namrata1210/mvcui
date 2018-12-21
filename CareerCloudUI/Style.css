@@ -4,36 +4,58 @@ header {
     border: 1px solid red;
     padding: 10px 10px 10px 10px;
     height: 100px;
-    width:auto;
-    background-color: aqua;
-   color: blue;
-    align-content: center;
+    width: auto;
+    background-color: grey;
+    color: blue;
+    text-align: center;
     font-family: Verdana;
     font-size: large;
+}
+img
+{
    
 }
 
 footer {
     border: 1px solid red;
    text-align:center; 
-    position: absolute;
     bottom: 0;
     width:100%;
-    background-color:aqua;
+    background-color:grey;
     color: blue;
     position:fixed;
 }
 
-#a{
-    width:50%;
-    float:left;
+#a {
+    width: 50%;
+    float: left;
+    word-spacing: normal;
 }
 #b {
     width: 50%;
     float: right;
+    font-weight:bold;
+   
 }
 #signin{
     align-content:center;
     margin-left:45%;
     width: 390px;
+}
+#appliedjob
+{
+    float:right;
+    overflow:auto;
+}
+.menu
+{
+
+text-decoration-color:black;
+width:100%;
+word-spacing:5cm;
+font-weight:bold;
+}
+#applicantpro
+{
+    align-content:center;
 }

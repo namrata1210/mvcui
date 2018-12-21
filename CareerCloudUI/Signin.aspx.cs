@@ -22,14 +22,11 @@ namespace CareerCloudUI
             SqlConnection conn;
             try
             {
-                //string sql = @"Select SL.Id
-                //          from[JOB_PORTAL_DB].[dbo].[Security_Roles] S
-                //         inner join[JOB_PORTAL_DB].[dbo].Security_Logins_Roles SLR on SLR.Role = S.Id
-                //          inner join[JOB_PORTAL_DB].[dbo].Security_Logins SL on SL.Id=SLR.Login
-                //        where SL.Login= @username and SL.Password= @password";
-                string sql = @"Select SL.Id
-                          from Security_Logins SL 
-                        where SL.Login= @username and SL.Password= @password";
+              
+                string sql = @"SELECT S.Id
+                               FROM Security_Logins S 
+                               WHERE S.Login= @username AND
+                               S.Password= @password";
 
 
                 conn = new SqlConnection(ConfigurationManager.ConnectionStrings["JOB_PORTAL_DBConnectionString"].ConnectionString);
@@ -50,31 +47,9 @@ namespace CareerCloudUI
                 if (id !=null)
                 {
                     Session["Applicant"] = id;
-                     //Response.Redirect("ApplicantProfile.aspx", false);
+                    Response.Redirect("ApplicantProfile.aspx", false);
+
                 }
-
-
-                //SqlDataReader dr = cmd.ExecuteReader();
-                //DataTable LoginData = new DataTable();
-                //LoginData.Load(dr);
-                //if (LoginData.Rows[0][0].ToString() == "Applicants")
-                //{
-                //    Session["id"] = LoginData.Rows[0][1].ToString();
-                //    Response.Redirect("ApplicantProfile.aspx", false);
-                //}
-                //else if (LoginData.Rows[0][0].ToString() == "Recruiters")
-                //{
-
-                //    Session["id"] = LoginData.Rows[0][1].ToString();
-                //    Response.Redirect("CompanyProfile.aspx", false);
-                //}
-                //else if (LoginData.Rows[0][0].ToString() == "Administrators")
-                //{
-
-
-
-
-
             }
             catch (Exception ex)
             {
@@ -84,14 +59,14 @@ namespace CareerCloudUI
            
         }
 
-        protected void RadioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-            Response.Redirect("ApplicantProfile.aspx", false);
-        }
+        //protected void RadioButtonRecruiter_CheckedChanged(object sender, EventArgs e)
+        //{
+        //    Response.Redirect("CompanyProfile.aspx", false);
+        //}
 
-        protected void RadioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-            Response.Redirect("CompanyProfile.aspx", false);
-        }
+        //protected void RadioButtonJobseeker_CheckedChanged(object sender, EventArgs e)
+        //{
+        //    Response.Redirect("ApplicantProfile.aspx", false);
+        //}
     }
 }

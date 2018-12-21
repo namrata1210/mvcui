@@ -11,7 +11,7 @@ namespace CareerCloudUI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Label1.Text = Session["Applicant"].ToString(); ;
+            Label1.Text = Session["Applicant"].ToString(); 
         }
 
         protected void FormView1_DataBound(object sender, EventArgs e)

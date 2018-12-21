@@ -1,12 +1,15 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/JobSeeker.master" AutoEventWireup="true" CodeBehind="AppliedJobs.aspx.cs" Inherits="CareerCloudUI.AppliedJobs" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="EmployeeSectionContent" runat="server">
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" style="z-index: 1; left: 10px; top: 156px; position: absolute; height: 133px; width: 187px">
+    <br />
+<br />
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" style="z-index: 1; left: 10px; top: 156px;bottom:100px;float:right; position: absolute; height: 133px; width: 187px">
         <Columns>
             <asp:BoundField DataField="Applicant" HeaderText="Applicant" SortExpression="Applicant" />
             <asp:BoundField DataField="Job" HeaderText="Job" SortExpression="Job" />
             <asp:BoundField DataField="Application_Date" HeaderText="Application_Date" SortExpression="Application_Date" />
         </Columns>
     </asp:GridView>
+     
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:JOB_PORTAL_DBConnectionString %>" SelectCommand="select Applicant_Job_Applications.Applicant, 
 Applicant_Job_Applications.Job, 
 Applicant_Job_Applications.Application_Date, 
@@ -20,7 +23,6 @@ where Applicant_Profiles.login=@ID">
         <selectparameters><asp:ControlParameter ControlID="Label2" PropertyName="Text"
                                   Name="ID" DBType="Guid" DefaultValue="0" />
  </selectparameters></asp:SqlDataSource>
-    
-  <%--  <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:JOB_PORTAL_DBConnectionString %>" SelectCommand="SELECT [Applicant], [Job], [Application_Date] FROM [Applicant_Job_Applications]"></asp:SqlDataSource>--%>
     <asp:Label ID="Label2" runat="server" style="z-index: 1; left: 10px; top: 189px; position: absolute" Text="Label" Visible="False"></asp:Label>
+         
 </asp:Content>

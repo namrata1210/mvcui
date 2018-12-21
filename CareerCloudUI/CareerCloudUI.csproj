@@ -68,13 +68,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ApplicantJobApplication.aspx" />
     <Content Include="ApplicantProfile.aspx" />
     <Content Include="AppliedJobs.aspx" />
     <Content Include="CompanyProfile.aspx" />
-    <Content Include="DateTime.ascx" />
     <Content Include="FindJobs.aspx" />
+    <Content Include="Career cloud Image.jpg" />
     <Content Include="LoginUserControl.ascx" />
-    <Content Include="Main.aspx" />
+    <Content Include="Home.aspx" />
     <Content Include="PostJob.aspx" />
     <Content Include="Resume.aspx" />
     <Content Include="SignUp.aspx" />
@@ -85,6 +86,13 @@
     <Content Include="WebUserControl1.ascx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicantJobApplication.aspx.cs">
+      <DependentUpon>ApplicantJobApplication.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApplicantJobApplication.aspx.designer.cs">
+      <DependentUpon>ApplicantJobApplication.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ApplicantProfile.aspx.cs">
       <DependentUpon>ApplicantProfile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -105,13 +113,6 @@
     </Compile>
     <Compile Include="CompanyProfile.aspx.designer.cs">
       <DependentUpon>CompanyProfile.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="DateTime.ascx.cs">
-      <DependentUpon>DateTime.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="DateTime.ascx.designer.cs">
-      <DependentUpon>DateTime.ascx</DependentUpon>
     </Compile>
     <Compile Include="Employer.master.cs">
       <DependentUpon>Employer.master</DependentUpon>
@@ -141,12 +142,12 @@
     <Compile Include="LoginUserControl.ascx.designer.cs">
       <DependentUpon>LoginUserControl.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Main.aspx.cs">
-      <DependentUpon>Main.aspx</DependentUpon>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Main.aspx.designer.cs">
-      <DependentUpon>Main.aspx</DependentUpon>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
     <Compile Include="Main.Master.cs">
       <DependentUpon>Main.Master</DependentUpon>
@@ -211,6 +212,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
